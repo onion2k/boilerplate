@@ -1,0 +1,31 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for webpack projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":
+      "webpack-dev-server --config webpack.config.js --progress --colors --watch",
+    "watch": "webpack --config webpack.config.js --watch",
+    "build": "webpack --config webpack.config.js"
+  },
+  "author": "Chris Neale",
+  "license": "ISC",
+  "dependencies": {
+    "copy-webpack-plugin": "^4.3.1",
+    "css-loader": "^0.28.8",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "stylelint": "^8.4.0",
+    "stylelint-webpack-plugin": "^0.9.0",
+    "webpack": "^3.10.0",
+    "webpack-cleanup-plugin": "^0.5.1",
+    "webpack-dev-server": "^2.10.1",
+    "webpack-subresource-integrity": "^1.0.3",
+    "worker-loader": "^1.1.0"
+  }
+}
