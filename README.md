@@ -4,7 +4,8 @@ A general boilerplate for apps that use webpack. Just for tinkering really.
 
 # Usage
 
-Clone or fork the repo and then use `npm i` to install. Or download a ZIP of the project.
+Fork the repo or download a ZIP of the project, and then use `npm i` to install.
+
 # Included tools
 
 | Tool | What it does |
