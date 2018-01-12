@@ -20,3 +20,10 @@ Fork the repo or download a ZIP of the project, and then use `npm i` to install.
 | Extract Text Plugin | Pulls out CSS and SCSS in to separate files
 | Webpack Subresource Integrity | Adds subresource hashs on build
 | Stylelint | Lints SCSS and CSS files for coding style errors
+| ESLint | Lint JS code
+| ESLint Airbnb | Eslint rules for airbnb style
+| ESLint Prettier | Eslint rules for prettier style
+
+# Switching ESLint rules
+
+Swap `"extends": "prettier"` to `"extends": "airbnb"` to use the Airbnb style.
