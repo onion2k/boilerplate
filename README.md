@@ -23,6 +23,8 @@ Fork the repo or download a ZIP of the project, and then use `npm i` to install.
 | [ESLint](https://eslint.org/) | Lint JS code
 | [ESLint Airbnb](https://github.com/airbnb/javascript) | Eslint rules for airbnb style
 | [Worker Loader](https://github.com/webpack-contrib/worker-loader) | Loads imports as Worker scripts (eg window.worker())
+| [dotenv-webpack](https://github.com/mrsteele/dotenv-webpack) | Makes environment vars from a .env file available
+| [Husky](https://github.com/typicode/husky) | Runs NPM scripts as git hooks 
 
 ## What isn't included
 
