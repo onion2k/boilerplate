@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const SriPlugin = require("webpack-subresource-integrity");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const StyleLintPlugin = require("stylelint-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
 
 const extractSass = new ExtractTextPlugin({
   filename: "[name].[contenthash].css",
@@ -60,6 +61,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new Dotenv({
+      path: "./.env",
+      safe: true
+    }),
     extractSass,
     new WebpackCleanupPlugin(),
     new HtmlWebpackPlugin({ template: "src/index.html" }),
