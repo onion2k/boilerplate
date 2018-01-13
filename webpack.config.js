@@ -49,6 +49,9 @@ module.exports = {
             },
             {
               loader: "sass-loader"
+            },
+            {
+              loader: "csscomb-loader"
             }
           ],
           fallback: "style-loader"

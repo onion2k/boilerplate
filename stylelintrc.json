@@ -23,6 +23,6 @@
         "ignore": ["after-comment"]
       }
     ],
-    "unit-whitelist": ["em", "rem", "%", "s", "vw", "vh", "vmin"]
+    "unit-whitelist": ["em", "rem", "%", "s", "vw", "vh", "vmin", "px"]
   }
 }
