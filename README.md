@@ -25,6 +25,7 @@ Fork the repo or download a ZIP of the project, and then use `npm i` to install.
 | [Worker Loader](https://github.com/webpack-contrib/worker-loader) | Loads imports as Worker scripts (eg window.worker())
 | [dotenv-webpack](https://github.com/mrsteele/dotenv-webpack) | Makes environment vars from a .env file available
 | [Husky](https://github.com/typicode/husky) | Runs NPM scripts as git hooks 
+| [lint-staged](https://github.com/okonet/lint-staged) | lint-staged to lint files before they're commited
 
 ## What isn't included
 
