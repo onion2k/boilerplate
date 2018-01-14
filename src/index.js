@@ -1,6 +1,5 @@
 import "./index.scss";
 
-/* eslint-disable no-console */
 console.log(process.env.NODE_ENV);
 
 for (let x = 0; x < 10; x += 1) {
