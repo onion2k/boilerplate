@@ -5,17 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config webpack.config.js --progress --colors --watch",
+    "start":
+      "webpack-dev-server --config webpack.config.js --progress --colors --watch",
     "watch": "webpack --config webpack.config.js --watch",
     "build": "webpack --config webpack.config.js",
     "lint": "eslint -c .eslintrc ./src",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "*.js": ["eslint -c .eslintrc ./src --fix", "git add"]
   },
   "author": "Chris Neale",
   "license": "ISC",
