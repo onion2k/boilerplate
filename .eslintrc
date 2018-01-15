@@ -2,6 +2,18 @@
   "parser": "babel-eslint",
   "extends": "airbnb",
   "rules": {
-    "quotes": [2, "double"]
+    "quotes": [2, "double"],
+    "require-jsdoc": [
+      "error",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": false,
+          "FunctionExpression": false
+        }
+      }
+    ]
   }
 }
