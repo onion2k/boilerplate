@@ -49,3 +49,8 @@ module: {
 ```
 
 That's it. Now three.js should work.
+
+## JSDoc in ESLint
+
+The .eslintrc config that comes with this Webpack Boilerplate requires JSDoc blocks ahead of classes and functions. Either turn it off if you don't use JSDoc, or use [Document This](https://marketplace.visualstudio.com/items?itemName=joelday.docthis) for VS Code to add doc blocks easily.
+
