@@ -1,69 +1,71 @@
-var path = require("path");
+const path = require("path");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackCleanupPlugin = require("webpack-cleanup-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const SriPlugin = require("webpack-subresource-integrity");
+// const CopyWebpackPlugin = require("copy-webpack-plugin");
+// const SriPlugin = require("webpack-subresource-integrity");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const StyleLintPlugin = require("stylelint-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 
+const ImageminPlugin = require("imagemin-webpack-plugin").default;
+
 const extractSass = new ExtractTextPlugin({
   filename: "[name].[contenthash].css",
-  disable: process.env.NODE_ENV === "development"
+  disable: process.env.NODE_ENV === "development",
 });
 
 module.exports = {
   entry: {
-    app: ["./src/index.js"]
+    app: ["./src/index.js"],
   },
   output: {
     path: path.resolve(__dirname, "dist"),
     publicPath: "/",
     filename: "index.js",
-    crossOriginLoading: "anonymous"
+    crossOriginLoading: "anonymous",
   },
   devServer: {
     contentBase: path.join(__dirname, "assets"),
-    port: 3000
+    port: 3000,
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: ["babel-loader", "eslint-loader"]
+        loader: ["babel-loader", "eslint-loader"],
       },
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: "css-loader"
-        })
+          use: "css-loader",
+        }),
       },
       {
         test: /\.scss$/,
         use: extractSass.extract({
           use: [
             {
-              loader: "css-loader"
+              loader: "css-loader",
             },
             {
-              loader: "sass-loader"
+              loader: "sass-loader",
             },
             {
-              loader: "csscomb-loader"
-            }
+              loader: "csscomb-loader",
+            },
           ],
-          fallback: "style-loader"
-        })
-      }
-    ]
+          fallback: "style-loader",
+        }),
+      },
+    ],
   },
   plugins: [
     new Dotenv({
       path: "./.env",
-      safe: true
+      safe: true,
     }),
     extractSass,
     new WebpackCleanupPlugin(),
@@ -74,10 +76,16 @@ module.exports = {
       context: "src",
       files: "**/*.scss",
       failOnError: false,
-      quiet: false
-    })
+      quiet: false,
+    }),
+    new ImageminPlugin({
+      disable: process.env.NODE_ENV !== "production", // Disable during development
+      pngquant: {
+        quality: "95-100",
+      },
+    }),
   ],
   node: {
-    fs: "empty"
-  }
+    fs: "empty",
+  },
 };
