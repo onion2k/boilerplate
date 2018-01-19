@@ -1,5 +1,7 @@
 import "./index.scss";
 
+// console.log("Output");
+
 /**
  *
  * It does stuff
